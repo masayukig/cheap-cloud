@@ -1,10 +1,13 @@
 \documentclass[aspectratio=169,11pt,hyperref={colorlinks=true}]{beamer}
+% https://github.com/zr-tex8r/BXcjkjatype/blob/master/README-ja.md
+\usepackage[whole]{bxcjkjatype}
 \usetheme{boxes}
 \setbeamertemplate{navigation symbols}{}
-\definecolor{openstack}{RGB}{149,0,4}
-\setbeamercolor{titlelike}{fg=openstack}
-\setbeamercolor{structure}{fg=openstack}
-\hypersetup{colorlinks,urlcolor=openstack}
+\definecolor{suse}{RGB}{2, 211, 95}
+\definecolor{susedark}{RGB}{13, 44, 64}
+\setbeamercolor{titlelike}{fg=suse}
+\setbeamercolor{structure}{fg=suse}
+\hypersetup{colorlinks,urlcolor=suse}
 \setbeamertemplate{footline}[frame number]
 % Inserting graphics
 \usepackage{graphicx}
@@ -14,8 +17,9 @@
 \usepackage{listings}
 % Color stuff
 \usepackage{color}
-% for ul
+% underline
 \usepackage{soul}
+
 \usepackage{amsmath}
 \usepackage{tikz}
 \newcommand\RBox[1]{%
@@ -26,31 +30,50 @@
 %\usecolortheme{wolverine}
 %\usetheme{Boadilla}
 \usepackage[T1]{fontenc}
+%\usepackage{fontspec}
+%\usepackage[expert, deluxe]{otf}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
+
+%\usepackage{CJK}
+%\pdfmapline{=genshingothic@Unicode@ <genshingothic.ttf}
+% bxcjkjatype
+%\setgothicfont[<ID>]{<フォントファイル名>}
+%\setgothicfont{/Users/foo/Library/Fonts/genshingothic.ttf}
+%\setgothicfont{/Users/foo/Library/Fonts/NotoSansCJKjp-Regular.otf}
+%\setgothicfont{/Users/foo/Downloads/genshingothic-20150607/GenShinGothic-P-Normal.ttf}
+%\setgothicfont{/Users/foo/Downloads/genshingothic-20150607/GenShinGothic-Regular.ttf}
+%\setgothicfont{hiragino.ttc}
+\setgothicfont{mplus-1p-regular.ttf}
+\setCJKfamilydefault{\gtdefault}
+%\setCJKfamilydefault{\mcdefault}
+%\CJKforce{abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ}
+
+
 \lstset{%
-  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  backgroundcolor=\color{susedark},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{openstack},  % comment style
+  commentstyle=\color{suse},  % comment style
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue},       % keyword style
 %  otherkeywords={*,...},           % if you want to add more keywords to the set
   numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  rulecolor=\color{white},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          % underline spaces within strings only
   showtabs=false,                  % show tabs within strings adding particular underscores
-  stringstyle=\color{openstack},   % string literal style
+  stringstyle=\color{suse},   % string literal style
 }
 
 \setbeamerfont{caption}{series=\normalfont,size=\fontsize{6}{8}}
+%\setbeamerfont{caption}{series=\normalfont,size=\large}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 
 \setlength{\abovecaptionskip}{0pt}
@@ -68,28 +91,40 @@
         }
     {Masayuki Igawa}
 }
-\date{August 2-3, 2018}
+\date{June 23, 2018}
+\def\place#1{\def\@place{#1}}
+\place{\href{https://opensuseja.connpass.com/event/86085/}{@openSUSE mini Summit 2018}}
 
-\title[Tiny Tiny Cheap Cloud
-\hspace{2em}\insertframenumber/\inserttotalframenumber]{Tiny Tiny
-  Cheap Cloud \\ @OpenStack Days Tokyo 2018}
+\title[private-cloud-on-openSUSE
+  \hspace{2em}\insertframenumber/\inserttotalframenumber]{openSUSE で おうちクラウド
+  \\ @openSUSE mini Summit 2018}
+
+\setbeamercolor{background canvas}{bg=susedark}
+\setbeamercolor{titlelike}{fg=white}
+\setbeamercolor{structure}{fg=white}
+\setbeamercolor{normal text}{fg=white}
 
 \begin{document}
 
 {%
-\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{background_title.png}}
+% \setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{background_title.png}}
 \setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=susedark}
 \begin{frame}[noframenumbering]
-    \setbeamercolor{titlelike}{fg=white}
-    \setbeamercolor{structure}{fg=white}
-    \setbeamercolor{normal text}{fg=white}
-    \hypersetup{colorlinks,urlcolor=white}
-    \setbeamercolor{author}{fg=white}
-    \setbeamercolor{date}{fg=white}
-    \setbeamercolor{background}{bg=openstack}
-    \titlepage{}
-    \centering
-    \href{https://github.com/masayukig/cheap-cloud}{https://github.com/masayukig/cheap-cloud}
+  \hypersetup{colorlinks,urlcolor=suse}
+  \setbeamercolor{author}{fg=white}
+  \setbeamercolor{date}{fg=white}
+  \setbeamercolor{place}{fg=white}
+  \titlepage{}
+  \centering
+  \@place \par
+  \href{https://github.com/masayukig/cheap-cloud}{https://github.com/masayukig/cheap-cloud}
+  \vspace{1em}
+  \begin{flushright}
+    \tiny\href{https://creativecommons.org/licenses/by/4.0/}{This work
+      is licensed under a Creative Commons Attribution 4.0
+      International License.}~\includegraphics[scale=0.3]{cc_by.png}
+  \end{flushright}
 \end{frame}
 }
 
