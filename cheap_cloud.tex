@@ -19,6 +19,8 @@
 \usepackage{color}
 % underline
 \usepackage{soul}
+% calc
+\usepackage{calc}
 
 \usepackage{amsmath}
 \usepackage{tikz}
@@ -136,15 +138,13 @@
     \item What is ``the OpenStack''?
     \item What I did
     \item Why do I need it?
-    \item How to build it? (Design, Hardware, Yahoo! auction, Rent a
-      car, LackRack)
+    \item How to build it?
     \item Benefits
     \item Issues
     \item Conclusion
     \item Demo
   \end{itemize}
 \end{frame}
-
 
 \section{Who I am?}
 \begin{frame}
@@ -216,6 +216,26 @@
 
 \section{How to build}
 \begin{frame}
+  \frametitle{Yahoo! Auction}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \begin{figure}
+        \begin{center}
+          \includegraphics[width=1.0\textwidth]{yahoo_auction_1u.png}
+        \end{center}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{figure}
+        \begin{center}
+          \includegraphics[width=1.0\textwidth]{yahoo_auction_1u_large.png}
+        \end{center}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
   \frametitle{Get 1U servers * 3}
   \begin{itemize}
     \item Yahoo! Auction!! \\
@@ -240,9 +260,9 @@
   \frametitle{Install openSUSE}
   No automation such as autoyast, ansible, puppet, etc
   \begin{itemize}
-    \item Download image and burn it to a USB stick
+    \item Download image and burn it to a USB stick (\url{https://software.opensuse.org/distributions/leap})
     \item Install from that media
-    \item Update it to the latest
+    \item Update it to the latest: \texttt{\$ sudo zypper dup}
     \item [TODO] Add Pictures for openSUSE
   \end{itemize}
 \end{frame}
@@ -251,7 +271,7 @@
   \frametitle{Install OpenStack}
   Use openSUSE rpm packages
   \begin{itemize}
-    \item Read the Doc
+    \item Read the Doc (e.g. \url{https://docs.openstack.org/nova/latest/})
     \item Install from the openSUSE repo
     \item Configure
     \item [TODO] Add Pictures for OpenStack dashboard
@@ -262,7 +282,7 @@
   \frametitle{Update OpenStack}
   \begin{itemize}
     \item Install from the openSUSE repo (Just needed to update repo URL)
-    \item No Configure
+    \item No Configuration changes
   \end{itemize}
 \end{frame}
 
@@ -271,7 +291,7 @@
   \frametitle{Benefits}
   \begin{itemize}
     \item Free to use!!!
-    \item Low Cost to have??
+    \item Low Cost to start
     \item Powerful
     \item Low Network Latency
     \item Warm (in winter)
@@ -282,11 +302,11 @@
 \begin{frame}
   \frametitle{Issues}
   \begin{itemize}
-    \item Electricity cost (10,000 JPY/month)
-    \item Noise (xxx db)
-    \item Space
-    \item Failures (HDD, Power Unit)
-    \item Abandonment
+    \item Electricity cost: 10,000 JPY/month (Expensive)
+    \item Noise (Imagin a server room)
+    \item Space (Expensive in Tokyo)
+    \item Failures (HDD, Power Unit... Expensive)
+    \item Abandonment (Expensive)
   \end{itemize}
 \end{frame}
 
@@ -312,9 +332,9 @@
 \begin{frame}
   \frametitle{Conclusion}
   \begin{itemize}
-    \item It's high cost and noisy
-    \item Own physical servers and play with it is super fun!
-    \item It's more transparent than public Clouds
+    \item Initial cost could be low but \bf{EXPENSIVE} to maintain and \bf{NOSIY}
+    \item More transparent than public clouds
+    \item Own physical servers and play with it is super \bf{FUN}!
   \end{itemize}
 \end{frame}
 
