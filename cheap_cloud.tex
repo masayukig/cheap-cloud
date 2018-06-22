@@ -255,8 +255,16 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Solution: \url{https://wiki.eth0.nl/index.php/LackRack}}
+  \frametitle{LackRack: \url{https://wiki.eth0.nl/index.php/LackRack}}
   \center{\includegraphics[width=0.38\textwidth]{LackRack.png}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Implemented}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{server_front.jpg}
+    \includegraphics[width=0.5\textwidth]{server_side.jpg}
+  \end{center}
 \end{frame}
 
 \begin{frame}
@@ -272,13 +280,23 @@
 
 \begin{frame}
   \frametitle{Install OpenStack}
-  Use openSUSE rpm packages
-  \begin{itemize}
-    \item Read the Doc (e.g. \url{https://docs.openstack.org/nova/latest/})
-    \item Install from the openSUSE repo
-    \item Configure
-    \item [TODO] Add Pictures for OpenStack dashboard
-  \end{itemize}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{figure}
+        Use openSUSE rpm packages
+        \begin{itemize}
+        \item Read the Doc (e.g. \url{https://docs.openstack.org/nova})
+        \item Install from the openSUSE repo
+        \item Configure
+        \end{itemize}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=1.0\textwidth]{openstack-dashboard-instances.png}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -287,6 +305,28 @@
     \item Install from the openSUSE repo (Just needed to update repo URL)
     \item No Configuration changes
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Use VMs: Mesos DC/OS}
+  \begin{columns}[T]
+    \begin{column}{1.0\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{mesos.png}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Use VMs: Rancher}
+  \begin{columns}[T]
+    \begin{column}{1.0\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{rancher.png}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \section{Benefits}
@@ -336,7 +376,7 @@
 \begin{frame}
   \frametitle{Conclusion}
   \begin{itemize}
-    \item Initial cost could be low but \bf{EXPENSIVE} to maintain and \bf{NOSIY}
+    \item Initial cost could be low but \bf{EXPENSIVE} to maintain and \bf{NOISY}
     \item More transparent than public clouds
     \item Own physical servers and play with it is super \bf{FUN}!
   \end{itemize}
