@@ -7,7 +7,7 @@
 \definecolor{susedark}{RGB}{13, 44, 64}
 \setbeamercolor{titlelike}{fg=suse}
 \setbeamercolor{structure}{fg=suse}
-\hypersetup{colorlinks,urlcolor=suse}
+\hypersetup{colorlinks,urlcolor=susedark}
 \setbeamertemplate{footline}[frame number]
 % Inserting graphics
 \usepackage{graphicx}
@@ -56,7 +56,7 @@
 
 
 \lstset{%
-  backgroundcolor=\color{susedark},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  backgroundcolor=\color{suse},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
@@ -101,19 +101,19 @@
   \hspace{2em}\insertframenumber/\inserttotalframenumber]{openSUSE で おうちクラウド
   \\ @openSUSE mini Summit 2018}
 
-\setbeamercolor{background canvas}{bg=susedark}
-\setbeamercolor{titlelike}{fg=white}
-\setbeamercolor{structure}{fg=white}
-\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{background canvas}{bg=suse}
+\setbeamercolor{titlelike}{fg=black}
+\setbeamercolor{structure}{fg=black}
+\setbeamercolor{normal text}{fg=black}
 
 \begin{document}
-
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{opensuse_base.png}}
 {%
-% \setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{background_title.png}}
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{opensuse_preface.png}}
 \setbeamertemplate{footline}{}
-\setbeamercolor{background canvas}{bg=susedark}
+\setbeamercolor{background canvas}{bg=suse}
 \begin{frame}[noframenumbering]
-  \hypersetup{colorlinks,urlcolor=suse}
+  \hypersetup{colorlinks,urlcolor=susedark}
   \setbeamercolor{author}{fg=white}
   \setbeamercolor{date}{fg=white}
   \setbeamercolor{place}{fg=white}
@@ -220,9 +220,7 @@
 
 \section{How to build}
 \begin{frame}
-  \begin{itemize}
-  \item[] How to get cheap servers?
-  \end{itemize}
+  \Huge{\bf{How to get cheap servers?}}
 \end{frame}
 
 \begin{frame}
