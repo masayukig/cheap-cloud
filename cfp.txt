@@ -1,3 +1,32 @@
+OpenStack Summit Berlin 2018
+----------------------------
+
+Title: Building Tiny Private OpenStack Cloud
+
+Abstract:
+Recently, public clouds are getting to be a majority of
+infrastructures. For example, using containers, Docker, Kubernetes,
+Web applications, etc. Of course, public clouds are very convenient
+because they are very easy to use and cheap comparing to using
+physical machines. However, it's sometimes a bit boring for some
+people who want to know/manage the whole of the things such as physical network,
+storage, machines, etc. And also, an experience of building a tiny
+cloud with physical machines could be a very good opportunity to
+understand computer technologies. Moreover, it's fun for such people
+like me.
+
+I had built a my own tiny private cloud with openSUSE and OpenStack on
+my own physical machines. And I'm now using it for some of purposes
+such as evaluating new Linux distributions, containers, Kubernetes,
+etc. I had allocated the budget around only 50k JPY (500USD) for
+building it. It's quite a cheap to build a *cloud* system, actually.
+However, it can be done with open source software and some tricks.
+
+In this talk, attendees will get to know about the *tiny private
+cloud*, how to build, issues/challenges, benefit and the potential
+capabilities of OpenStack.
+
+
 openSUSE.Asia Summit 2018
 -------------------------
 
