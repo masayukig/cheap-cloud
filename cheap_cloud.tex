@@ -5,9 +5,10 @@
 \setbeamertemplate{navigation symbols}{}
 \definecolor{suse}{RGB}{2, 211, 95}
 \definecolor{susedark}{RGB}{13, 44, 64}
+\definecolor{linkcolor}{RGB}{13, 44, 255}
 \setbeamercolor{titlelike}{fg=suse}
 \setbeamercolor{structure}{fg=suse}
-\hypersetup{colorlinks,urlcolor=susedark}
+\hypersetup{colorlinks,urlcolor=linkcolor}
 \setbeamertemplate{footline}[frame number]
 % Inserting graphics
 \usepackage{graphicx}
@@ -99,11 +100,12 @@
 }
 \date{June 23, 2018}
 \def\place#1{\def\@place{#1}}
-\place{\href{https://opensuseja.connpass.com/event/86085/}{@openSUSE mini Summit 2018}}
+\place{\href{https://events.opensuse.org/conference/summitasia18}{@openSUSE.Asia Summit 2018}}
 
 \title[private-cloud-on-openSUSE
-  \hspace{2em}\insertframenumber/\inserttotalframenumber]{openSUSE で おうちクラウド
-  \\ @openSUSE mini Summit 2018}
+  \hspace{2em}\insertframenumber/\inserttotalframenumber]{Building
+  Tiny Private openSUSE Cloud
+  \\ @openSUSE.Asia Summit 2018}
 
 \setbeamercolor{background canvas}{bg=white}
 \setbeamercolor{titlelike}{fg=black}
@@ -160,42 +162,49 @@
 \begin{frame}
   \frametitle{Who I am?}
   \begin{itemize}
-    \item Company：2017.3- SUSE/Novell Japan
+    \item Company：2017.3- SUSE/Novell Japan -> 2019 ???(\href{https://www.suse.com/c/further-independence-for-suse/}{\scriptsize{``Further Independence for SUSE''}})
       \begin{itemize}
         \item SUSE OpenStack Cloud QE(Quality Engineering) Team (I'm
           the only one person who are in Japan and Japanese)
+          \begin{scriptsize}
         \item[]
           \href{https://www.suse.com/newsroom/post/2016/suse-acquires-openstack-iaas-and-cloud-foundry-paas-talent-and-technology-assets-from-hpe-to-accelerate-growth-and-entry-into-new-markets/}{``SUSE
-            Acquires OpenStack IaaS and Cloud Foundry PaaS Talent and
-            Technology Assets from HPE to Accelerate Growth and Entry
-            into New Markets''}
+            Acquires OpenStack IaaS and CF PaaS Talent and Tech Assets
+            from HPE ...''}
+          \end{scriptsize}
       \end{itemize}
     \item Job: Senior Software Engineer/Open Source Programmer
       \begin{itemize}
+        \begin{scriptsize}
         \item \href{https://www.openstack.org/}{OpenStack}
-         \href{https://wiki.openstack.org/wiki/QA}{QA} Up/Downstream development, Core Reviewer
-        \item[] (\href{https://docs.openstack.org/developer/tempest/}{Tempest},
-         \href{http://status.openstack.org/openstack-health/}{OpenStack-Health},
-         \href{https://docs.openstack.org/developer/subunit2sql/}{Subunit2SQL},
-         \href{https://docs.openstack.org/developer/stackviz/}{Stackviz})
-        \item \href{http://stackalytics.com/?user_id=igawa&release=all&metric=all}{stackalytics.com/?user\_id=igawa}
-        \item \href{https://github.com/masayukig}{github.com/masayukig}
+          \href{https://wiki.openstack.org/wiki/QA}{QA} Up/Downstream development, Core Reviewer
+        \item[]
+          (\href{https://docs.openstack.org/developer/tempest/}{Tempest},
+          \href{http://status.openstack.org/openstack-health/}{OpenStack-Health},
+          \href{https://docs.openstack.org/developer/subunit2sql/}{Subunit2SQL},
+          \href{https://docs.openstack.org/developer/stackviz/}{Stackviz})
+        \item
+          \href{http://stackalytics.com/?user_id=igawa&release=all&metric=all}{stackalytics.com/?user\_id=igawa},
+          \href{https://github.com/masayukig}{github.com/masayukig}
+        \end{scriptsize}
       \end{itemize}
-    \item Books \includegraphics[scale=0.2]{OpenStack_Integration_book.png}~\includegraphics[scale=0.2]{InfraCI_book.png}
+    \item Books \includegraphics[scale=0.1]{OpenStack_Integration_book.png}~\includegraphics[scale=0.1]{InfraCI_book.png}
       \begin{itemize}
-      \item \href{https://www.amazon.co.jp/dp/4798139785/}{OpenStack
-        Cloud Integration (OpenStack クラウドインテグレーション (オー
-        プンソースクラウドによるサービス構築入門))}
-      \item \href{https://www.amazon.co.jp/dp/4798155128/}{Infra CI
-        Pragmatic Guide (インフラ CI 実践ガイド (Ansible/GitLabを使っ
-        たインフラ改善サイクルの実現))} (as a reviewer)
+      \item \href{https://www.amazon.co.jp/dp/4798139785/}{\scriptsize{OpenStack
+        Cloud Integration (OpenStack クラウドインテグレーション)}}
+      \item \href{https://www.amazon.co.jp/dp/4798155128/}{\scriptsize{Infra CI
+        Pragmatic Guide - Ansible/GitLab (インフラ CI 実践ガイド)}} (as a reviewer)
+      \end{itemize}
+    \item Hobby
+      \begin{itemize}
+      \item Bike, Diet, etc.
       \end{itemize}
   \end{itemize}
 \end{frame}
 
-\section{What is ``the OpenStack''?}
+\section{What is the ``OpenStack''?}
 \begin{frame}
-  \frametitle{What is ``the OpenStack''?}
+  \frametitle{What is the ``OpenStack''?}
   \begin{itemize}
     \item Open Source Cloud OS Software: Apache License Version 2.0
     \item Written in Python
