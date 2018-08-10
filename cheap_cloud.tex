@@ -98,13 +98,13 @@
         }
     {Masayuki Igawa}
 }
-\date{August 11, 2018}
+\date{\href{https://events.opensuse.org/conference/summitasia18/program/proposal/2101}{August 11, 2018}}
 \def\place#1{\def\@place{#1}}
 \place{\href{https://events.opensuse.org/conference/summitasia18}{@openSUSE.Asia
     Summit 2018 in Taipei}}
 
 \title[private-cloud-on-openSUSE
-  \hspace{2em}\insertframenumber/\inserttotalframenumber]{Building
+  \hspace{2em}\insertframenumber/\inserttotalframenumber]{Building A
   Tiny Private openSUSE Cloud
   \\ @openSUSE.Asia Summit 2018}
 
@@ -140,7 +140,7 @@
 \section{Agenda}
 \begin{frame}
   \frametitle{Agenda}
-  \begin{itemize}
+  \begin{enumerate}
     \item Who I am?
     \item What is ``the OpenStack''?
     \item What I did
@@ -151,7 +151,7 @@
     \item Demo
     \item Future Work
     \item Conclusion
-  \end{itemize}
+  \end{enumerate}
 \end{frame}
 
 \section{DISCLAIMER}
@@ -208,7 +208,7 @@
 \begin{frame}
   \frametitle{What is the ``OpenStack''?}
   \begin{itemize}
-    \item Open Source Cloud OS Software: Apache License Version 2.0
+    \item Open Source Cloud Operation System: Apache License Version 2.0
     \item Written in Python
     \item There are a lot of `OpenStack' projects: \href{http://governance.openstack.org/reference/projects/index.html}{65 projects(2018-06-18)}
     \item Released every 6 month: Latest version is called `Queens'
@@ -224,13 +224,13 @@
 \section{What I did}
 \begin{frame}
   \frametitle{What I did}
-  \begin{itemize}
+  \begin{enumerate}
     \item Got 1U servers * 3
     \item Set up the servers
     \item Installed openSUSE
     \item Installed OpenStack
     \item Using VMs
-  \end{itemize}
+  \end{enumerate}
 \end{frame}
 
 \section{Why do I need the private Cloud?}
@@ -313,24 +313,25 @@
 \begin{frame}
   \frametitle{Install openSUSE}
   No automation such as autoyast, ansible, puppet, etc
-  \begin{itemize}
+  \begin{enumerate}
     \item Download image and burn it to a USB stick (\url{https://software.opensuse.org/distributions/leap})
     \item Install from that media
     \item Update it to the latest: \texttt{\$ sudo zypper dup}
-  \end{itemize}
+  \end{enumerate}
   \center{\includegraphics[width=0.5\textwidth]{opensuse.png}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Install OpenStack: Use openSUSE rpm packages}
+  No automation as well
   \begin{columns}[T]
     \begin{column}{0.55\textwidth}
       \begin{figure}
-        \begin{itemize}
+        \begin{enumerate}
         \item Read the Doc (e.g. \url{https://docs.openstack.org/install-guide/})
         \item Install from the openSUSE repo
         \item Configure
-        \end{itemize}
+        \end{enumerate}
       \end{figure}
     \end{column}
     \begin{column}{0.5\textwidth}
