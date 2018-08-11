@@ -238,7 +238,7 @@
 \begin{frame}
   \frametitle{Why do I need the private Cloud?}
   \begin{itemize}
-    \item Very Good Exercise to learn Computer, Network, Storage
+    \item Very Good Exercise to learn Compute, Network, Storage
     \item Understand the Cloud architecture
     \item Use VMs for sandboxes such as k8s, mesos, etc.
     \item \bf{FUN!!}
@@ -313,18 +313,28 @@
 
 \begin{frame}
   \frametitle{Install openSUSE}
-  No automation such as autoyast, ansible, puppet, etc
-  \begin{enumerate}
-    \item Download image and burn it to a USB stick (\url{https://software.opensuse.org/distributions/leap})
-    \item Install from that media
-    \item Update it to the latest: \texttt{\$ sudo zypper dup}
-  \end{enumerate}
-  \center{\includegraphics[width=0.5\textwidth]{opensuse.png}}
+  (No automation such as autoyast, ansible, puppet, etc.)
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{figure}
+        \begin{enumerate}
+        \item Download image and burn it to a USB stick (\url{https://software.opensuse.org/distributions/leap})
+        \item Install from that media
+        \item Update it to the latest: \texttt{\$ sudo zypper dup}
+        \end{enumerate}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \center{\includegraphics[width=1.0\textwidth]{opensuse.png}}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Install OpenStack: Use openSUSE rpm packages}
-  No automation as well
+  (No automation as well)
   \begin{columns}[T]
     \begin{column}{0.55\textwidth}
       \begin{figure}
